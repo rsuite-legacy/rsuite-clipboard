@@ -19,7 +19,7 @@ const Home = React.createClass({
                 <h2>Document</h2>
                 <div className="row">
                     <div className="col-md-12">
-                        <Markdown>{require('../md/props.md')}</Markdown>
+                        <Markdown>{require('../../README.md')}</Markdown>
                     </div>
                 </div>
             </div>
