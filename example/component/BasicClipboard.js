@@ -15,7 +15,7 @@ export default React.createClass({
     },
     handleCopy(text, result){
         Clipboard.select(findDOMNode(this._input));
-        const message = result ? '已成功复制到剪切板' : '复制失败，浏览器暂不支持此功能';
+        const message = result ? 'Copied successful.' : 'Copied failure,your browser dosn\'t support this features.';
         this._notificationSystem.addNotification({
             message,
             autoDismiss: 1.5,
