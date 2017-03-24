@@ -1,8 +1,8 @@
 {
   "name": "rsuite-clipboard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "lib/main.js",
   "scripts": {
     "build": "rm -rf lib && babel src --out-dir lib",
     "dev": "NODE_ENV=development NODE_TYPE=integration webpack-dev-server --hot --inline --progress --colors --port 3092 --host 0.0.0.0 --devtool eval",
