@@ -1,0 +1,27 @@
+@import '../../node_modules/rsuite-theme/dist/less/rsuite';
+@import 'style.less';
+@import 'highlight.less';
+
+@base-color: #6292f0;
+
+.clipboard-group {
+    input.form-control,
+    button.btn.btn-default {
+        display: inline-block;
+    }
+    input.form-control {
+        width: ~'calc(100% - 52px)';
+    }
+}
+
+.footer {
+    padding: 18px 0;
+    text-align: right;
+    a {
+        margin: 0 10px;
+    }
+    .fa-github {
+        font-size: 18px;
+        vertical-align: middle;
+    }
+}

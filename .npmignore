@@ -1,0 +1,11 @@
+/.vagrant
+/.idea
+/assets
+/example
+/src
+/.babelrc
+/.editorconfig
+/.eslintignore
+/.gitignore
+/.eslintrc
+/webpack.config.js

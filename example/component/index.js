@@ -1,0 +1,1 @@
+export BasicClipboard from './BasicClipboard';
