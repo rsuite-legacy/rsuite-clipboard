@@ -23,21 +23,17 @@ export default React.createClass({
             level: 'success'
         });
     },
-    componentDidMount: function () {
-        this._input = this.refs.input;
-        this._notificationSystem = this.refs.notificationSystem;
-    },
     render(){
         const { text } = this.state;
         return (
             <div className="clipboard-group">
-                <FormControl type='text' value={text} onChange={this.handleChange} ref="input"/>
+                <FormControl type='text' value={text} onChange={this.handleChange} ref={ref => this._input = ref}/>
                 <Clipboard text={text} onCopy={this.handleCopy}>
                     <Button shape='default'>
                         <IconFont icon="clipboard"/>
                     </Button>
                 </Clipboard>
-                <NotificationSystem ref="notificationSystem"/>
+                <NotificationSystem ref={ref => this._notificationSystem = ref}/>
             </div>
         );
     }
