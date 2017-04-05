@@ -5,6 +5,14 @@ import React, { PropTypes, Component } from 'react';
 import { copy, select } from '../util';
 
 class Clipboard extends Component {
+    static copy = copy;
+    static select = select;
+    static propTypes = {
+        text: PropTypes.string.isRequired,
+        children: PropTypes.element.isRequired,
+        onCopy: PropTypes.func
+    };
+
     constructor(props) {
         super(props);
     }
@@ -43,14 +51,5 @@ class Clipboard extends Component {
         });
     }
 }
-
-Clipboard.propTypes = {
-    text: PropTypes.string.isRequired,
-    children: PropTypes.element.isRequired,
-    onCopy: PropTypes.func
-};
-
-Clipboard.copy = copy;
-Clipboard.select = select;
 
 export default Clipboard;
