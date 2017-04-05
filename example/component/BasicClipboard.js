@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import { Button, FormControl, IconFont } from 'rsuite';
 import Clipboard from '../../src/main';
 import NotificationSystem  from 'react-notification-system';
 
-export default React.createClass({
-    getInitialState(){
-        return {
+export default class BasicClipboard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
             text: 'git@github.com:rsuite/rsuite.git'
         };
-    },
-    handleChange(text){
+    }
+
+    handleChange(text) {
         this.setState({ text });
-    },
-    handleCopy(text, result){
+    }
+
+    handleCopy(text, result) {
         Clipboard.select(findDOMNode(this._input));
         const message = result ? 'Copied successful.' : 'Copied failure,your browser dosn\'t support this features.';
         this._notificationSystem.addNotification({
@@ -22,13 +25,18 @@ export default React.createClass({
             position: 'tc',
             level: 'success'
         });
-    },
-    render(){
+    }
+
+    render() {
         const { text } = this.state;
         return (
             <div className="clipboard-group">
-                <FormControl type='text' value={text} onChange={this.handleChange} ref={ref => this._input = ref}/>
-                <Clipboard text={text} onCopy={this.handleCopy}>
+                <FormControl
+                    type='text'
+                    value={text}
+                    onChange={this.handleChange.bind(this)}
+                    ref={ref => this._input = ref}/>
+                <Clipboard text={text} onCopy={this.handleCopy.bind(this)}>
                     <Button shape='default'>
                         <IconFont icon="clipboard"/>
                     </Button>
@@ -37,4 +45,4 @@ export default React.createClass({
             </div>
         );
     }
-});
+};

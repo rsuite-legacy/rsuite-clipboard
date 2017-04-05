@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Markdown } from 'markdownloader';
 
 import { BasicClipboard } from '../component';
 
-const Home = React.createClass({
-    render(){
+class Home extends Component {
+    render() {
         return (
             <div>
                 <h2>Example</h2>
@@ -25,6 +25,6 @@ const Home = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default Home;

@@ -1,24 +1,19 @@
 /**
  * Created by Godfery on 2017/3/24.
  */
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { copy, select } from '../util';
 
-const Clipboard = React.createClass({
-    propTypes: {
-        text: PropTypes.string.isRequired,
-        children: PropTypes.element.isRequired,
-        onCopy: PropTypes.func
-    },
-    getDefaultProps(){
-        return {
-            action: 'copy'
-        };
-    },
-    handleCopy(text){
+class Clipboard extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    handleCopy(text) {
         return copy(text);
-    },
-    onClick(event){
+    }
+
+    onClick(event) {
         const {
             text,
             onCopy,
@@ -31,8 +26,9 @@ const Clipboard = React.createClass({
 
         onCopy && onCopy(text, result);
         onClick && onClick(event);
-    },
-    render(){
+    }
+
+    render() {
         const {
             text,
             onCopy,
@@ -43,10 +39,16 @@ const Clipboard = React.createClass({
 
         return React.cloneElement(elem, {
             ...props,
-            onClick: this.onClick
+            onClick: this.onClick.bind(this)
         });
     }
-});
+}
+
+Clipboard.propTypes = {
+    text: PropTypes.string.isRequired,
+    children: PropTypes.element.isRequired,
+    onCopy: PropTypes.func
+};
 
 Clipboard.copy = copy;
 Clipboard.select = select;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Header, Navbar, Nav, Row, Col, IconFont } from 'rsuite';
 
-const App = React.createClass({
-    render(){
+class App extends Component {
+    render() {
         return (
             <div className="doc-page">
                 <Header inverse>
@@ -47,6 +47,6 @@ const App = React.createClass({
             </div>
         );
     }
-});
+}
 
 export default App;
