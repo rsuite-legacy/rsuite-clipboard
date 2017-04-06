@@ -7,17 +7,20 @@ module.exports.getPlugins = function (NODE_ENV) {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
         }),
-        new ExtractTextPlugin('[name].css'),
-        new HtmlWebpackPlugin({
+        new ExtractTextPlugin('[name].css')
+    ];
+
+    if (NODE_ENV === 'production' || NODE_ENV === 'development') {
+        plugins.push(new HtmlWebpackPlugin({
             title: 'Rsuite Uploader',
             filename: 'index.html',
             template: 'example/index.html',
             inject: true,
             hash: true
-        })
-    ];
+        }));
+    }
 
-    if (NODE_ENV === 'production') {
+    if (NODE_ENV === 'production' || NODE_ENV === 'release') {
         plugins.push(
             new webpack.optimize.UglifyJsPlugin({
                 compress: {

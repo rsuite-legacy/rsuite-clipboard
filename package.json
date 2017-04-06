@@ -1,14 +1,15 @@
 {
   "name": "rsuite-clipboard",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "lib/main.js",
   "scripts": {
     "build": "rm -rf lib && babel src --out-dir lib",
     "dev": "NODE_ENV=development NODE_TYPE=integration webpack-dev-server --hot --inline --progress --colors --port 3092 --host 0.0.0.0 --devtool eval",
     "predocs": "NODE_ENV=production webpack --inline --progress --colors",
+    "release": "NODE_ENV=release webpack --inline --progress",
     "docs": "node example/gh-pages.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build && npm run release"
   },
   "repository": {
     "type": "git",
