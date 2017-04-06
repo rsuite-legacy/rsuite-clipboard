@@ -1,6 +1,6 @@
 {
   "name": "rsuite-clipboard",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "lib/main.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "url": "https://github.com/rsuite/rsuite-clipboard/issues"
   },
   "homepage": "https://github.com/rsuite/rsuite-clipboard#readme",
-  "dependencies": {
-    "react": "^0.14.2"
+  "peerDependencies": {
+    "react": ">=0.14.0 || ^15.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
@@ -48,6 +48,7 @@
     "less-loader": "^2.2.3",
     "markdown-loader": "^0.1.7",
     "markdownloader": "^1.0.5",
+    "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-markdown": "^2.4.2",
     "react-notification-system": "^0.2.13",
@@ -56,6 +57,7 @@
     "rsuite-theme": "^0.3.23",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.8",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   }
 }
