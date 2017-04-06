@@ -1,6 +1,3 @@
-/**
- * Created by Godfery on 2017/3/24.
- */
 import { execCommandCopy, select } from './index';
 
 export default function copy(text) {

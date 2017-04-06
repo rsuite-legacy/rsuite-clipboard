@@ -1,6 +1,3 @@
-/**
- * Created by Godfery on 2017/3/24.
- */
 import React, { PropTypes, Component } from 'react';
 import { copy, select } from '../util';
 
