@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf lib && babel src --out-dir lib",
     "dev": "NODE_ENV=development NODE_TYPE=integration webpack-dev-server --hot --inline --progress --colors --port 3092 --host 0.0.0.0 --devtool eval",
-    "docs": "NODE_ENV=production webpack --inline --progress --colors",
+    "predocs": "NODE_ENV=production webpack --inline --progress --colors",
+    "docs": "node example/gh-pages.js",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -40,6 +41,7 @@
     "express-fileupload": "^0.0.5",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.10.1",
+    "gh-pages": "^0.12.0",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.24.0",
     "includes-loader": "^0.1.0",
