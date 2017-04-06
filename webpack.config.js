@@ -29,8 +29,8 @@ module.exports = (() => {
                 }
             },
             output: {
-                path: path.join(__dirname, 'release'),
-                filename: `${pkg.version}/[name].min.js`,
+                path: path.join(__dirname, 'dist'),
+                filename: '[name].min.js',
                 library: 'rsuiteClipboard',
                 libraryTarget: 'umd'
             },
