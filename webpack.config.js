@@ -22,16 +22,16 @@ module.exports = (() => {
             },
             externals: {
                 "react": {
-                    commonjs: "react",
-                    commonjs2: "react",
-                    amd: "react",
-                    root: "react"
+                    commonjs: "React",
+                    commonjs2: "React",
+                    amd: "React",
+                    root: "React"
                 }
             },
             output: {
                 path: path.join(__dirname, 'dist'),
                 filename: '[name].min.js',
-                library: 'rsuiteClipboard',
+                library: 'RsuiteClipboard',
                 libraryTarget: 'umd'
             },
         });
