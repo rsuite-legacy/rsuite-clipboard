@@ -1,5 +1,6 @@
 #  Clipboard
 [![bitHound Overall Score](https://www.bithound.io/github/rsuite/rsuite-clipboard/badges/score.svg)](https://www.bithound.io/github/rsuite/rsuite-clipboard)
+[![npm version](https://badge.fury.io/js/rsuite-clipboard.svg)](https://badge.fury.io/js/rsuite-clipboard)
 
 [Home Page](hrrp://rsuite.github.io/rsuite-clipboard)
 
