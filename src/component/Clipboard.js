@@ -12,10 +12,11 @@ class Clipboard extends Component {
 
     constructor(props) {
         super(props);
+        this.onClick = this.onClick.bind(this);
     }
 
-    handleCopy(text) {
-        return copy(text);
+    handleCopy(text, prevDom) {
+        return copy(text, prevDom);
     }
 
     onClick(event) {
@@ -27,8 +28,7 @@ class Clipboard extends Component {
 
         const elem = React.Children.only(children);
         const { onClick } = elem.props;
-        const result = this.handleCopy(text);
-
+        const result = this.handleCopy(text, event.target);
         onCopy && onCopy(text, result);
         onClick && onClick(event);
     }
@@ -44,7 +44,7 @@ class Clipboard extends Component {
 
         return React.cloneElement(elem, {
             ...props,
-            onClick: this.onClick.bind(this)
+            onClick: this.onClick
         });
     }
 }

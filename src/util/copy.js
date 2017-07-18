@@ -1,6 +1,6 @@
 import { execCommandCopy, select } from './index';
 
-export default function copy(text) {
+export default function copy(text, prevElem = document.body.firstChild) {
     const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
 
     const fakeElem = document.createElement('textarea');
@@ -23,7 +23,7 @@ export default function copy(text) {
 
     fakeElem.setAttribute('readonly', '');
     fakeElem.value = text;
-    document.body.appendChild(fakeElem);
+    prevElem && prevElem.after(fakeElem);
     select(fakeElem);
     const result = execCommandCopy();
     fakeElem.remove();

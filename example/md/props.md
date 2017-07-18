@@ -10,6 +10,7 @@
 If you don't want to use `Clipboard`, you can execute this function to copy text in clipboard.
 ```
  @param {String} text - Text to be copied to clipboard. 
+ @param {Element} prevElem - The elements before the fake elements,defalut value is document.body.firstElementChild. 
  @return {Boolean} - Whether copy success.
 ```
 
