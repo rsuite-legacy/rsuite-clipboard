@@ -15,7 +15,10 @@ class App extends Component {
                         </Navbar.Header>
                         <Navbar.Collapse>
                             <Nav pullRight>
-                                <Nav.Item href="https://github.com/rsuite/rsuite-clipboard">GitHub</Nav.Item>
+                                <Nav.Item href="https://github.com/rsuite/rsuite-clipboard">
+                                    <IconFont icon="github"/>
+                                    {' GitHub'}
+                                </Nav.Item>
                             </Nav>
                         </Navbar.Collapse>
                     </div>
@@ -24,6 +27,17 @@ class App extends Component {
                 <div className="container">
                     <h1>{'<Clipboard/>'}</h1>
                     <hr/>
+                    <p>
+                        <a href="https://www.bithound.io/github/rsuite/rsuite-clipboard">
+                            <img src="https://www.bithound.io/github/rsuite/rsuite-clipboard/badges/score.svg"
+                                 alt="bitHound Overall Score"
+                            />
+                        </a>
+                        {' '}
+                        <a href="https://badge.fury.io/js/rsuite-clipboard">
+                            <img src="https://badge.fury.io/js/rsuite-clipboard.svg" alt="npm version"/>
+                        </a>
+                    </p>
                     <p>Modern copy to clipboard for react.</p>
                     {this.props.children}
                 </div>

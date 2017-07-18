@@ -10,6 +10,11 @@ class Home extends Component {
                 <h2>Example</h2>
                 <div className="row">
                     <div className="col-md-8">
+                        <Markdown>{require('../md/basic_pre.md')}</Markdown>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-md-8">
                         <Markdown>{require('../md/basic.md')}</Markdown>
                     </div>
                     <div className="col-md-4">
