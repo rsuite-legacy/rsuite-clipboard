@@ -28,5 +28,7 @@ describe('Clipborad Test', () => {
         expect(fullRender.find('#test').exists()).toBe(true);
         fullRender.simulate('click');
     });
+
+    //@todo test select function
 });
 
