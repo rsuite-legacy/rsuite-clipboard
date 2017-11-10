@@ -23,7 +23,7 @@ export default function copy(text, prevElem = document.body.firstChild) {
 
     fakeElem.setAttribute('readonly', '');
     fakeElem.value = text;
-    prevElem && prevElem.after(fakeElem);
+    prevElem && prevElem.after && prevElem.after(fakeElem);
     select(fakeElem);
     const result = execCommandCopy();
     fakeElem.remove();
