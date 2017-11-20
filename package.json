@@ -76,6 +76,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "lodash.omit": "^4.5.0",
     "markdown-loader": "^0.1.7",
     "markdownloader": "^1.0.5",
     "react": "^15.4.2",
