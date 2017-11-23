@@ -76,7 +76,6 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "lodash.omit": "^4.5.0",
     "markdown-loader": "^0.1.7",
     "markdownloader": "^1.0.5",
     "react": "^15.4.2",
@@ -95,6 +94,11 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "lodash": "^4.17.4",
     "prop-types": "^15.6.0"
-  }
+  },
+  "files": [
+    "README.md",
+    "lib"
+  ]
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { copy, select } from '../util';
-import _omit from 'lodash.omit';
+import _omit from 'lodash/omit';
 
 const propTypes = {
     text: PropTypes.string.isRequired,
