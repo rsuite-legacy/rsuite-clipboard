@@ -22,10 +22,10 @@
     "lint": "eslint src/**/*.js",
     "build": "rm -rf lib && babel src --out-dir lib",
     "dev": "NODE_ENV=development NODE_TYPE=integration webpack-dev-server --hot --inline --progress --colors --port 3100 --host 0.0.0.0 --devtool eval",
-    "release": "NODE_ENV=release webpack --inline --progress",
-    "predocs": "NODE_ENV=production webpack --inline --progress --colors",
+    "release": "NODE_ENV=release webpack  --progress",
+    "predocs": "NODE_ENV=production webpack  --progress --colors",
     "docs": "node example/gh-pages.js",
-    "prepublish": "npm run build && npm run release",
+    "prepublish": "npm run build",
     "test": "npm run lint && jest",
     "jest": "jest",
     "coverage": "jest --colors --coverage",
@@ -46,6 +46,7 @@
     "react-dom": ">=0.14.0"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.6",
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
     "babel-eslint": "^7.2.2",
@@ -59,6 +60,7 @@
     "codecov": "^2.2.0",
     "coveralls": "^2.13.1",
     "css-loader": "^0.23.1",
+    "cssnano": "^3.10.0",
     "enzyme": "^2.7.1",
     "es5-shim": "^4.1.14",
     "eslint": "^2.8.0",
@@ -66,7 +68,7 @@
     "eslint-plugin-react": "^5.0.1",
     "express": "^4.14.0",
     "express-fileupload": "^0.0.5",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "^0.10.1",
     "gh-pages": "^0.12.0",
     "html-loader": "^0.4.5",
@@ -78,10 +80,12 @@
     "less-loader": "^2.2.3",
     "markdown-loader": "^0.1.7",
     "markdownloader": "^1.0.5",
+    "postcss-loader": "^2.0.9",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-markdown": "^2.4.2",
+    "react-markdown-reader": "^1.0.1",
     "react-notification-system": "^0.2.13",
     "react-router": "^3.0.0",
     "react-test-renderer": "^16.1.0",
@@ -90,8 +94,8 @@
     "sinon": "^4.1.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.8",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "2.2.1",
+    "webpack-dev-server": "2.3.0"
   },
   "dependencies": {
     "lodash": "^4.17.4",
@@ -99,6 +103,7 @@
   },
   "files": [
     "README.md",
-    "lib"
+    "lib",
+    "dist"
   ]
 }

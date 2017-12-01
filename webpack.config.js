@@ -1,17 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
-const loaders = require('./webpack/loaders');
+const rules = require('./webpack/rules');
 const { getPlugins } = require('./webpack/plugins');
-const markdownLoader = require('markdownloader').renderer;
 const { NODE_ENV } = process.env;
 const pkg = require('./package.json');
 
 const common = {
     plugins: getPlugins(NODE_ENV),
     module: {
-        loaders
+        rules
     },
-    markdownLoader
 };
 
 module.exports = (() => {
