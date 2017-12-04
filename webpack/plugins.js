@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports.getPlugins = function (NODE_ENV) {
@@ -32,5 +33,16 @@ module.exports.getPlugins = function (NODE_ENV) {
 
         plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
     }
+
+    if (NODE_ENV === 'production') {
+        plugins.push(new CompressionPlugin({
+            asset: '[path].gz[query]',
+            algorithm: 'gzip',
+            test: /\.(js|html)$/,
+            threshold: 10240,
+            minRatio: 0.8
+        }));
+    }
+
     return plugins;
 };
