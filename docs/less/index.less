@@ -1,8 +1,14 @@
 @import '~rsuite-theme/dist/less/rsuite';
-@import 'style.less';
-@import 'highlight.less';
+@import '~rsuite-docs/lib/less/index.less';
+@import '~react-markdown-reader/less/highlight';
+@import '~react-code-view/lib/less/index.less';
 
 @base-color: #6292f0;
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
 
 .clipboard-group {
     input.form-control,
@@ -14,17 +20,5 @@
     }
     button.btn.btn-default {
         float: right;
-    }
-}
-
-.footer {
-    padding: 18px 0;
-    text-align: right;
-    a {
-        margin: 0 10px;
-    }
-    .fa-github {
-        font-size: 18px;
-        vertical-align: middle;
     }
 }

@@ -37,7 +37,7 @@ module.exports = (() => {
 
     return Object.assign({}, common, {
         entry: {
-            index: path.join(__dirname, 'example')
+            index: path.join(__dirname, 'docs')
         },
         output: {
             path: path.join(__dirname, 'assets'),

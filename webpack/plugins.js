@@ -14,7 +14,7 @@ module.exports.getPlugins = function (NODE_ENV) {
         plugins.push(new HtmlWebpackPlugin({
             title: 'Rsuite Uploader',
             filename: 'index.html',
-            template: 'example/index.html',
+            template: 'docs/index.html',
             inject: true,
             hash: true
         }));

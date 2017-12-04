@@ -1,5 +1,8 @@
 {
     "critics": {
         "lint": {"engine": "eslint"}
-    }
+    },
+    "test": [
+        "**/src/**"
+    ]
 }

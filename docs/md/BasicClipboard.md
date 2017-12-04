@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
-import { findDOMNode } from 'react-dom';
-import { Button, FormControl, IconFont } from 'rsuite';
-import Clipboard from '../../src/main';
-import NotificationSystem  from 'react-notification-system';
-
-export default class BasicClipboard extends Component {
+## 示例
+<!--start-code-->
+```js
+class BasicClipboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -46,3 +43,6 @@ export default class BasicClipboard extends Component {
         );
     }
 };
+ReactDOM.render(<BasicClipboard />);
+```
+<!--end-code-->
